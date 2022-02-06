@@ -1,8 +1,8 @@
 from typing import List
 
 from discord.abc import Messageable
-from discord_components import (
-    DiscordComponents,
+from distons import (
+    distons,
     Button,
     ButtonStyle,
     Select,
@@ -14,7 +14,7 @@ from discord_components import (
 class Paginator:
     def __init__(
         self,
-        client: DiscordComponents,
+        client: distons,
         channel: Messageable,
         contents: List[str],
         use_select: bool = False,

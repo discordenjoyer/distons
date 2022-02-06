@@ -1,5 +1,5 @@
 from discord.ext.commands import command, Cog
-from discord_components import (
+from distons import (
     Button,
     ButtonStyle,
     Select,

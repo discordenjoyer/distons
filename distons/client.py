@@ -15,10 +15,10 @@ from .interaction import Interaction, InteractionEventType
 
 from .ext.filters import *
 
-__all__ = ("DiscordComponents", "ComponentsClient", "ComponentsBot")
+__all__ = ("distons", "ComponentsClient", "ComponentsBot")
 
 
-class DiscordComponents:
+class distons:
     def __init__(
         self,
         bot: Union[Bot, Client],
@@ -118,10 +118,10 @@ class DiscordComponents:
 class ComponentsClient(Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.components_manager = DiscordComponents(self)
+        self.components_manager = distons(self)
 
 
 class ComponentsBot(Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.components_manager = DiscordComponents(self)
+        self.components_manager = distons(self)
